@@ -37,23 +37,62 @@
       <section class="baslik">
         <h1>Effective Solutions for Your Business</h1>
         <button type="submit">Order Service</button>
-        <div class="modal">
-          <form>
-            <p>Leave your contacts and we will call you back</p>
-            <label for="name">Name</label>
-            <input type="text" />
-            <label for="Phone">Phone</label>
-            <input type="number" />
-            <label for="email">E-mail</label>
-            <input type="text" />
-            <label for="Comment">Comment</label>
-            <input type="text" placeholder="Text input" />
-            <label>
-              <input type="radio" name="Privacy" value="Privacy" checked /> I
-              accept the terms and conditions of the Privacy Policy
-            </label>
-            <button type="Send">Send</button>
-          </form>
+        <div class="backdrop">
+          <div class="modal">
+            <form>
+              <p>Leave your contacts and we will call you back</p>
+              <div class="formod">
+                <label for="name">Name</label>
+                <div class="formin">
+                  <svg class="formsvg">
+                    <use
+                      xlink:href="images/icons.svg/symbol-defs.svg#icon-Frame-1"
+                    ></use>
+                  </svg>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="formod">
+                <label for="Phone">Phone</label>
+                <div class="formin">
+                  <svg class="formsvg">
+                    <use
+                      xlink:href="images/icons.svg/symbol-defs.svg#icon-phone-black-18dp-1"
+                    ></use>
+                  </svg>
+                  <input type="number" />
+                </div>
+              </div>
+
+              <div class="formod">
+                <label for="email">E-mail</label>
+                <div class="formin">
+                  <svg class="formsvg">
+                    <use
+                      xlink:href="images/icons.svg/symbol-defs.svg#icon-email-black-18dp-1"
+                    ></use>
+                  </svg>
+                  <input type="text" />
+                </div>
+              </div>
+
+              <label for="Comment">Comment</label>
+              <textarea
+                name="Comment"
+                id="Comment"
+                placeholder="Text input"
+              ></textarea>
+
+              <div class="formod">
+                <label>
+                  <input type="radio" name="Privacy" value="Privacy" checked />
+                  I accept the terms and conditions of the
+                  <a href="#" target="_blank">Privacy Policy</a>
+                </label>
+              </div>
+              <button type="Send">Send</button>
+            </form>
+          </div>
         </div>
       </section>
       <section class="container1">

@@ -432,3 +432,110 @@ h2 {
         height: 40px;
  }
 
+.formin {
+    position: relative;
+}
+
+.formin .formsvg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: #4D5AE5;
+    pointer-events: none;
+}
+
+.formin input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(46, 47, 66, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease;
+    z-index: 999;
+}
+
+.modal {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.formin {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.formsvg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: #4D5AE5;
+    pointer-events: none;
+}
+
+.formin input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.privacy-label {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
