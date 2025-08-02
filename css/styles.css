@@ -457,11 +457,9 @@ h2 {
 }
 
 .backdrop {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
     background-color: rgba(46, 47, 66, 0.4);
     display: flex;
     justify-content: center;
@@ -472,25 +470,34 @@ h2 {
     z-index: 999;
 }
 
+.closeicon {
+    width: 24px;
+    height: 24px;
+    fill: #2E2F42;
+}
+
 .modal {
-    position: relative;
+    position: absolute;
     background-color: #fff;
     padding: 40px;
     border-radius: 8px;
     width: 90%;
     max-width: 400px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 408px;
+    height: 584px;
 }
 
 .modal-close {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    color: #000;
+    width: 8px;
+    height: 8px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -513,7 +520,13 @@ h2 {
     height: 18px;
     fill: #4D5AE5;
     pointer-events: none;
-}
+   }
+
+    
+.close-icon {
+    width: 24px;
+    height: 24px;
+        }
 
 .formin input {
     width: 100%;
@@ -538,4 +551,24 @@ input[type="email"] {
     gap: 10px;
     font-size: 14px;
     margin-bottom: 20px;
+}
+
+.iconsbsc {
+    width: 24px;
+    height: 20px;
+    color: #FFFFFF;
+}
+
+.subscribe {
+    display: flex;
+    background-color: #2E2F42;
+}
+
+.subscribe input{
+    background-color: #2E2F42;
+
+}
+
+.subscribe label {
+    color: #F4F4FD;
 }

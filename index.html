@@ -37,8 +37,15 @@
       <section class="baslik">
         <h1>Effective Solutions for Your Business</h1>
         <button type="submit">Order Service</button>
-        <div class="backdrop">
+        <div class="backdrop is-close">
           <div class="modal">
+            <button type="button" class="modal-close">
+              <svg class="closeicon">
+                <use
+                  xlink:href="images/icons.svg/symbol-defs.svg#icon-close"
+                ></use>
+              </svg>
+            </button>
             <form>
               <p>Leave your contacts and we will call you back</p>
               <div class="formod">
@@ -49,7 +56,7 @@
                       xlink:href="images/icons.svg/symbol-defs.svg#icon-Frame-1"
                     ></use>
                   </svg>
-                  <input type="text" />
+                  <input type="text" name="username" />
                 </div>
               </div>
               <div class="formod">
@@ -60,7 +67,7 @@
                       xlink:href="images/icons.svg/symbol-defs.svg#icon-phone-black-18dp-1"
                     ></use>
                   </svg>
-                  <input type="number" />
+                  <input type="number" name="userphone" />
                 </div>
               </div>
 
@@ -72,7 +79,7 @@
                       xlink:href="images/icons.svg/symbol-defs.svg#icon-email-black-18dp-1"
                     ></use>
                   </svg>
-                  <input type="text" />
+                  <input type="text" name="email" />
                 </div>
               </div>
 
@@ -90,7 +97,7 @@
                   <a href="#" target="_blank">Privacy Policy</a>
                 </label>
               </div>
-              <button type="Send">Send</button>
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
@@ -391,14 +398,21 @@
           </div>
           <div class="subscribe">
             <form>
-              <label for="email">subscribe</label>
+              <label for="email">Subscribe</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="E-mail"
               />
-              <button type="submit">Subscribe</button>
+              <button type="submit">
+                Subscribe
+                <svg class="iconsbsc">
+                  <use
+                    xlink:href="images/icons.svg/symbol-defs#icon-icon-send"
+                  ></use>
+                </svg>
+              </button>
             </form>
           </div>
         </div>
