@@ -10,6 +10,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+    
 }
 
 .containerx{
@@ -331,6 +332,7 @@ h2 {
 .containerft{
     display: flex;
     align-items: baseline;
+    gap: 80px;
 }
 
 .ft .foot {
@@ -474,7 +476,7 @@ h2 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     display: none;
     justify-content: center;
@@ -533,31 +535,48 @@ input[type="email"] {
     height: 24px;
 }
 
-.iconsbsc {
-    width: 24px;
-    height: 24px;
-    fill: #2E2F42;
-}
+
 
 .subscribe {
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 24px 0;
     gap: 16px;
     background-color: #2E2F42;
+    gap: 24px;
 }
 
-.subscribe form input{
+.subscribe form {
+    display: flex;
+    gap: 24px;
+        align-items: center;
+        flex-wrap: wrap;
+}
+
+.lain input{
     background-color: #2E2F42;
     border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    
+}
+
+.lain {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .subscribe label {
     color: #F4F4FD;
+    gap: 24px;
+    
 }
+
+
 
 .formod label {
     font-family: "roboto" sans-serif;
@@ -581,14 +600,32 @@ input[type="email"] {
 }
 
 .submit {
-    font: 500 16px / 1.5 "Roboto", sans-serif;
+    font-family: "roboto" sans-serif;
+    font-size: 16px;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+    
+    
 }
 
-.subscribe form {
+.submit button {
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
+    background: #4d5ae5;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
 }
+
+.iconsbsc {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+
