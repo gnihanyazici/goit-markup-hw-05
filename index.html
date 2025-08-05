@@ -37,7 +37,7 @@
       <section class="baslik">
         <h1>Effective Solutions for Your Business</h1>
         <button type="submit">Order Service</button>
-        <div class="backdrop is-close">
+        <div class="backdrop.is open">
           <div class="modal">
             <button type="button" class="modal-close">
               <svg class="closeicon">
@@ -83,19 +83,25 @@
                 </div>
               </div>
 
-              <label for="Comment">Comment</label>
-              <textarea
-                name="Comment"
-                id="Comment"
-                placeholder="Text input"
-              ></textarea>
+              <div class="comment">
+                <label for="Comment">Comment</label>
+              </div>
+              <div class="comment">
+                <textarea
+                  name="Comment"
+                  id="Comment"
+                  placeholder="Text input"
+                ></textarea>
+              </div>
 
               <div class="formod">
-                <label>
-                  <input type="radio" name="Privacy" value="Privacy" checked />
-                  I accept the terms and conditions of the
-                  <a href="#" target="_blank">Privacy Policy</a>
-                </label>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                    I accept the terms and conditions of the
+                    <a href="#" target="_blank">Privacy Policy</a>
+                  </label>
+                </div>
               </div>
               <button type="submit">Send</button>
             </form>
@@ -405,14 +411,16 @@
                 id="email"
                 placeholder="E-mail"
               />
-              <button type="submit">
-                Subscribe
-                <svg class="iconsbsc">
-                  <use
-                    xlink:href="images/icons.svg/symbol-defs#icon-icon-send"
-                  ></use>
-                </svg>
-              </button>
+              <div class="submit">
+                <button type="submit">
+                  Subscribe
+                  <svg class="iconsbsc">
+                    <use
+                      xlink:href="images/icons.svg/symbol-defs#icon-icon-send"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
             </form>
           </div>
         </div>

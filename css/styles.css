@@ -103,9 +103,10 @@ ul {
         url(../images/people-office1.jpg);
     background-position: center center;
     background-size: cover;
-
-
+  
 }
+
+
 .baslik h1{
     color: #FFFFFF;
     font-family: "roboto";
@@ -115,6 +116,7 @@ ul {
     line-height: 107%;
     margin: 0 auto;
     padding: 150;
+    
 }
 
 button {
@@ -374,7 +376,7 @@ h2 {
 }
 
 .footsocial {
-    margin: 0;
+    margin: 0 auto;
 }
 
 .iconft {
@@ -388,21 +390,40 @@ h2 {
 .iconft:hover {
      fill: #31d0aa;
 }
-    
- .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+.modal {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid;   
+    background-color: #fff;
+    padding: 40px;
+    width: 90%;
+    width: 408px;
+    height: 584px;
  }   
 
+ .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0%;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
  
- .modal form {
+.modal-close:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal form {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -410,31 +431,32 @@ h2 {
     gap: 8px;
     border-radius: 4px;
     background-color: #fcfcfc;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-        max-width: 408;
-        border-radius: 4px;
+    max-width: 408;
+    border-radius: 4px;
  }
 
- .modal form p {
+.modal form p {
     font: 500 16px / 1.5 "Roboto", sans-serif;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #2e2f42;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
  }
 
- .modal form input {
+.modal form input {
     font: 400 12px / 1.16667 "Roboto", sans-serif;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    border: 1px solid #4d5ae5;
-        border-radius: 4px;
-        width: 360px;
-        height: 40px;
+    border: 1px solid #2E2F42;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
  }
 
-.formin {
-    position: relative;
-}
+.formin input:hover,
+.formin input:focus {
+     border: 1px solid #4D5AE5;
+ }
+
 
 .formin .formsvg {
     position: absolute;
@@ -442,32 +464,25 @@ h2 {
     left: 12px;
     transform: translateY(-50%);
     width: 18px;
-    height: 18px;
-    fill: #4D5AE5;
+    height: 24px;
     pointer-events: none;
 }
 
-.formin input {
-    width: 100%;
-    padding: 10px 10px 10px 40px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
 .backdrop {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(46, 47, 66, 0.4);
-    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 999;
+    display: none;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 300ms ease, visibility 300ms ease;
-    z-index: 999;
+}
+
+.is-open {
+    display: flex;
 }
 
 .closeicon {
@@ -475,36 +490,6 @@ h2 {
     height: 24px;
     fill: #2E2F42;
 }
-
-.modal {
-    position: absolute;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    width: 408px;
-    height: 584px;
-}
-
-.modal-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-open {
-    opacity: 1;
-    visibility: visible;
-}
-
 
 .formin {
     position: relative;
@@ -522,17 +507,16 @@ h2 {
     pointer-events: none;
    }
 
-    
 .close-icon {
     width: 24px;
     height: 24px;
-        }
+}
 
 .formin input {
     width: 100%;
     padding: 10px 10px 10px 40px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #2E2F4266;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -544,31 +528,67 @@ input[type="email"] {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.privacy-label {
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
-    margin-bottom: 20px;
+    padding: 3px 0px;
+     width: 18px;
+    height: 24px;
 }
 
 .iconsbsc {
     width: 24px;
-    height: 20px;
-    color: #FFFFFF;
+    height: 24px;
+    fill: #2E2F42;
 }
 
 .subscribe {
     display: flex;
+    align-items: center;
+    gap: 16px;
     background-color: #2E2F42;
 }
 
-.subscribe input{
+.subscribe form input{
     background-color: #2E2F42;
-
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .subscribe label {
     color: #F4F4FD;
+}
+
+.formod label {
+    font-family: "roboto" sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 4%;
+    color: #8E8F99;
+    font-weight: regular;
+}
+.comment {
+    font-family: "roboto" sans-serif;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 4%;
+        color: #8E8F99;
+        font-weight: regular;
+}
+
+.checkbox {
+    display: block;
+}
+
+.submit {
+    font: 500 16px / 1.5 "Roboto", sans-serif;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+}
+
+.subscribe form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
