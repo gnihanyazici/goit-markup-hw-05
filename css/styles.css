@@ -444,30 +444,38 @@ h2 {
     color: #2e2f42;
  }
 
+
+.formin input:focus {
+     border: 1px solid  #4D5AE5;
+     outline: none;
+ }
+
 .modal form input {
     font: 400 12px / 1.16667 "Roboto", sans-serif;
     letter-spacing: 0.04em;
-    color: #8e8f99;
-    border: 1px solid #2E2F42;
+    color: #2e2f42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     width: 360px;
     height: 40px;
+    outline: none;
  }
 
-.formin input:hover,
-.formin input:focus {
-     border: 1px solid #4D5AE5;
- }
-
-
-.formin .formsvg {
+.formsvg {
     position: absolute;
     top: 50%;
     left: 12px;
     transform: translateY(-50%);
     width: 18px;
-    height: 24px;
+    height: 18px;
     pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    fill: #2E2F42;
+}
+
+.formsvg:hover {
+fill: #4D5AE5;
 }
 
 .backdrop {
@@ -487,27 +495,24 @@ h2 {
     display: flex;
 }
 
-.closeicon {
+.modal .closeicon {
     width: 24px;
     height: 24px;
-    fill: #2E2F42;
+    fill: #E7E9FC;
 }
+
+.modal .closeicon:hover,
+.modal .closeicon:focus {
+    fill: #404BBF;
+}
+
 
 .formin {
     position: relative;
     margin-bottom: 20px;
 }
 
-.formsvg {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    fill: #4D5AE5;
-    pointer-events: none;
-   }
+
 
 .close-icon {
     width: 24px;
@@ -588,20 +593,40 @@ input[type="email"] {
 }
 .comment {
     font-family: "roboto" sans-serif;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 4%;
-        color: #8E8F99;
-        font-weight: regular;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 4%;
+    color: #8E8F99;
+    font-weight: regular;
+}
+
+.comment textarea {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 120px;
 }
 
 .checkbox {
-    display: block;
+    display: flex;
+    align-items: center;
+    font: 400 12px / 1.16667 "Roboto", sans-serif;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    outline: none;
+    
 }
 
+.checkbox input[type="checkbox"] {
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    width: 16px;
+    height: 16px;
+}
+
+
 .submit {
-    font-family: "roboto" sans-serif;
-    font-size: 16px;
+    font: 500 16px / 1.5 "Roboto", sans-serif;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
