@@ -593,6 +593,12 @@ h2 {
     height: 120px;
 }
 
+.comment textarea:hover,
+.comment textarea:focus {
+    border: 1px solid #4D5AE5;
+}
+
+
 .checkbox {
     display: flex;
     align-items: center;
