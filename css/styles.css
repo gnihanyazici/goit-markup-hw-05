@@ -474,8 +474,9 @@ h2 {
     fill: #2E2F42;
 }
 
-.formsvg:hover {
-fill: #4D5AE5;
+.formsvg:hover
+.formsvg:focus {
+    fill: #4D5AE5;
 }
 
 .backdrop {
@@ -512,8 +513,6 @@ fill: #4D5AE5;
     margin-bottom: 20px;
 }
 
-
-
 .close-icon {
     width: 24px;
     height: 24px;
@@ -527,19 +526,6 @@ fill: #4D5AE5;
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-input[type="text"],
-input[type="tel"],
-input[type="email"] {
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    padding: 3px 0px;
-     width: 18px;
-    height: 24px;
-}
-
 
 
 .subscribe {
